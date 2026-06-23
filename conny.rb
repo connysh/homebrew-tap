@@ -5,21 +5,21 @@
 class Conny < Formula
   desc "A tiny ConnectRPC gateway"
   homepage "https://github.com/connysh/conny"
-  version "0.4.1"
+  version "0.5.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/connysh/conny/releases/download/v0.4.1/conny_0.4.1_darwin_amd64.tar.gz"
-      sha256 "5f6f7d4931353d538224adf6c62fc5c4d957da7fabc31b790af0a0cae9fa0fce"
+      url "https://github.com/connysh/conny/releases/download/v0.5.0/conny_0.5.0_darwin_amd64.tar.gz"
+      sha256 "fca8b864bbb2838d06d9c3d88620f299a5307701cd932a3cf1daafa020516fa9"
 
       define_method(:install) do
         bin.install "conny"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/connysh/conny/releases/download/v0.4.1/conny_0.4.1_darwin_arm64.tar.gz"
-      sha256 "1b8d6429ef72041b3b065e7931b1e944293380be37154f26f69c96fa45ab7ff8"
+      url "https://github.com/connysh/conny/releases/download/v0.5.0/conny_0.5.0_darwin_arm64.tar.gz"
+      sha256 "01dfcf2bbf3f170a599fafa5e1c2712e4b78171a5c6b360248903a07f48cbdc5"
 
       define_method(:install) do
         bin.install "conny"
@@ -29,15 +29,15 @@ class Conny < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/connysh/conny/releases/download/v0.4.1/conny_0.4.1_linux_amd64.tar.gz"
-      sha256 "235f1d33ecb39f5123c5d02f332cd46315041f56f00b520787f1ee437cfb6bd6"
+      url "https://github.com/connysh/conny/releases/download/v0.5.0/conny_0.5.0_linux_amd64.tar.gz"
+      sha256 "5c7da7f81a2ec998400d6fc70913977b33d3f2f5d2dae0bd9a4633bc09eb8977"
       define_method(:install) do
         bin.install "conny"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/connysh/conny/releases/download/v0.4.1/conny_0.4.1_linux_arm64.tar.gz"
-      sha256 "7c25670cccb965e5376fdd4d0d42de10ea8945b49c425755c89439dc7627f2f4"
+      url "https://github.com/connysh/conny/releases/download/v0.5.0/conny_0.5.0_linux_arm64.tar.gz"
+      sha256 "7638d7941ffec530659460e0fe127b662e07778435b69026ca76cab2befb2045"
       define_method(:install) do
         bin.install "conny"
       end
